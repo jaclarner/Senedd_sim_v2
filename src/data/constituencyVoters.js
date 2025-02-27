@@ -1,1 +1,37 @@
+// src/data/constituencyVoters.js
+const constituencyVoters = {
+  "Aberafan Maesteg": 30021.31,
+  "Alyn and Deeside": 29521.05,
+  "Bangor Aberconwy": 36643.36,
+  "Blaenau Gwent and Rhymney": 28431.6,
+  "Brecon, Radnor and Cwm Tawe": 41104.41,
+  "Bridgend": 31846.5,
+  "Caerfyrddin": 40702.48,
+  "Caerphilly": 31881.52,
+  "Cardiff East": 32608.35,
+  "Cardiff North": 41262.94,
+  "Cardiff South and Penarth": 31798.36,
+  "Cardiff West": 40670.85,
+  "Ceredigion Preseli": 41475.28,
+  "Clwyd East": 35141.7,
+  "Clwyd North": 35029,
+  "Dwyfor Meirionnydd": 37717.16,
+  "Gower": 39936.52,
+  "Llanelli": 33549.6,
+  "Merthyr Tydfil and Aberdare": 25433.7,
+  "Mid and South Pembrokeshire": 37067.31,
+  "Monmouthshire": 39338.19,
+  "Montgomeryshire and Glyndwr": 36605.45,
+  "Neath and Swansea East": 30463.6,
+  "Newport East": 28968.92,
+  "Newport West and Islwyn": 33032.6,
+  "Pontypridd": 32446.92,
+  "Rhondda and Ogmore": 33836.22,
+  "Swansea West": 30590.92,
+  "Torfaen": 26118.67,
+  "Vale of Glamorgan": 31691.7,
+  "Wrexham": 39030.2,
+  "Ynys Môn": 27255.8
+};
 
+export default constituencyVoters;
