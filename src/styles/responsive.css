@@ -1,1 +1,228 @@
+/* src/styles/responsive.css */
+/* Mobile-first responsive styles */
 
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .logo-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .national-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .seat-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .party-label {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  
+  .input-container {
+    width: 100%;
+  }
+  
+  .party-input {
+    width: 100%;
+  }
+  
+  .vote-indicator {
+    left: 0;
+    top: 36px;
+  }
+  
+  .party-row {
+    grid-template-columns: 100px 1fr;
+  }
+  
+  .party-row .bar-container:first-of-type {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .party-row .bar-container:last-of-type {
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 0.75rem;
+  }
+  
+  .coalition-breakdown {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+  
+  .seat-grid {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  .national-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .party-row {
+    grid-template-columns: 120px 1fr 1fr;
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+  .app-container {
+    padding: 2rem;
+  }
+  
+  .grid {
+    grid-template-columns: minmax(300px, 1fr) 2fr;
+  }
+  
+  .coalition-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .coalition-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .seat {
+    cursor: pointer;
+  }
+  
+  .seat:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+  }
+  
+  .select-input, 
+  .constituency-select {
+    min-height: 44px;
+  }
+  
+  .close-button {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Increase spacing for better touch targets */
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .legend-item {
+    padding: 0.25rem 0;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #111827;
+    --text-color: #f9fafb;
+    --text-light: #d1d5db;
+    --border-color: #374151;
+  }
+  
+  .card, 
+  .modal-container {
+    background-color: #1f2937;
+  }
+  
+  .constituency-table th,
+  .closest-contests-table th,
+  .allocation-table th {
+    background-color: #374151;
+  }
+  
+  .btn-secondary {
+    background-color: #374151;
+    color: #f9fafb;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #4b5563;
+  }
+  
+  .bar-container {
+    background-color: #374151;
+  }
+  
+  .coalition-card {
+    border-color: #374151;
+    background-color: #1f2937;
+  }
+  
+  .seat {
+    background-color: #4b5563;
+  }
+  
+  .allocation-explanation,
+  .party-input,
+  .select-input,
+  .constituency-select {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+  
+  .winning-party,
+  .winning-row {
+    background-color: rgba(5, 150, 105, 0.2);
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .fade-in {
+    animation: none !important;
+    opacity: 1;
+  }
+  
+  .seat,
+  .coalition-card:hover {
+    transform: none !important;
+  }
+}
